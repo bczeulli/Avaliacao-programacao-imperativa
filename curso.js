@@ -1,15 +1,14 @@
-const { listaAlunos } = require('./aluno');
-let alunos = require ('./aluno')
+let {listaAlunos, Aluno} = require ('./aluno')
 
 function Curso(nomeDoCurso, notaDeAprovacao, faltasMaximas) {
     this.nomeDoCurso = nomeDoCurso ;
     this.notaDeAprovacao = notaDeAprovacao ;
     this.faltasMaximas = faltasMaximas ;
-    this.listaDeEstudantes = alunos.listaAlunos ;
+    this.listaDeEstudantes = listaAlunos ;
 
     this.adicionarAluno = function (nome, faltas, notas) {
-        const novoAluno = alunos.novoAluno(nome, faltas, notas);
-        return this.listaDeEstudantes.push(novoAluno) ;
+        const novoAluno = new Aluno(nome, faltas, notas);
+        this.listaDeEstudantes.push(novoAluno) ;
     }
 
     this.aprovarAluno = function (alunoAvaliado) {
@@ -36,7 +35,7 @@ function Curso(nomeDoCurso, notaDeAprovacao, faltasMaximas) {
         listaAlunosAprovados.push(this.aprovarAluno(this.listaDeEstudantes[i]))
         
         }
-        console.log(listaAlunosAprovados)
+        return listaAlunosAprovados
     }
     
 
@@ -52,4 +51,4 @@ let prog = new Curso("prog", 7, 20)
 
 prog.adicionarAluno("Henrique", 9, [2,5,3,6]);
 
-console.log(prog.aprovarAluno(listaAlunos[5]))
+console.log(prog.alunosAprovados())

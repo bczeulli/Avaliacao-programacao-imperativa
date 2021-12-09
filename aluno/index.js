@@ -26,11 +26,9 @@ const aluno3 = new Aluno("Jose",4,[8,6,10,8]);
 const aluno4 = new Aluno("Maria",7,[7,8,9,8]);
 const aluno5 = new Aluno("Ricardo",12,[7,8,6,5]);
 
-
+listaAlunos = [aluno1, aluno2, aluno3, aluno4, aluno5]
 module.exports = {
-    listaAlunos: [aluno1, aluno2, aluno3, aluno4, aluno5],
-    novoAluno: function(nome, faltas, notas){
-        const aluno = new Aluno (nome, faltas, notas)
-        this.listaAlunos.push(aluno)
-    },
+    listaAlunos ,
+    Aluno,
+    
 }
