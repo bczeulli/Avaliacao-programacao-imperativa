@@ -1,3 +1,4 @@
+const { listaAlunos } = require('./aluno');
 let alunos = require ('./aluno')
 
 function Curso(nomeDoCurso, notaDeAprovacao, faltasMaximas) {
@@ -51,4 +52,4 @@ let prog = new Curso("prog", 7, 20)
 
 prog.adicionarAluno("Henrique", 9, [2,5,3,6]);
 
-prog.alunosAprovados()
+console.log(prog.aprovarAluno(listaAlunos[5]))
