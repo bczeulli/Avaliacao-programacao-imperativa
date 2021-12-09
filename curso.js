@@ -30,9 +30,11 @@ function Curso(nomeDoCurso, notaDeAprovacao, faltasMaximas) {
     this.alunosAprovados = function () {
         
         let listaAlunosAprovados = []
-        listaAlunosAprovados.push(this.aprovarAluno(this.listaDeEstudantes[0]))
-        listaAlunosAprovados.push(this.aprovarAluno(this.listaDeEstudantes[4]))
-        listaAlunosAprovados.push(this.aprovarAluno(this.listaDeEstudantes[5]))
+
+        for(let i = 0; i < this.listaDeEstudantes.length; i++){
+        listaAlunosAprovados.push(this.aprovarAluno(this.listaDeEstudantes[i]))
+        
+        }
         console.log(listaAlunosAprovados)
     }
     
