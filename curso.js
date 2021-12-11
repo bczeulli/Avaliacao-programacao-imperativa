@@ -47,8 +47,8 @@ function Curso(nomeDoCurso, notaDeAprovacao, faltasMaximas) {
 
 
 
-let prog = new Curso("prog", 7, 20)
+let programacaoImperativa = new Curso("prog", 7, 20)
 
-prog.adicionarAluno("Henrique", 9, [2,5,3,6]);
+programacaoImperativa.adicionarAluno("Henrique", 9, [2,5,3,6]);
 
-console.log(prog.alunosAprovados())
+console.log(programacaoImperativa)
